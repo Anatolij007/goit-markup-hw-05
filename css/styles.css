@@ -95,13 +95,12 @@ img {
 .nav-item:hover .icon-header,
 .nav-item:focus .icon-header {
   fill: #188ce8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list .nav-item + .nav-item {
   margin-left: 50px;
 }
-/*.auth-nav .nav-item + .nav-item {
-  margin-left: 50px;
-}*/
+
 .icon-header {
   margin-right: 10px;
   fill: var(--grey-text);
@@ -114,6 +113,7 @@ img {
 .icon-header:focus {
   color: var(--blue-text);
   fill: var(--blue-text);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-info {
@@ -130,24 +130,30 @@ img {
 .link:hover,
 .link:focus {
   color: var(--blue-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list .link.current {
   color: var(--blue-text);
+  position: relative;
+  
+  
 }
 
 .auth-nav .link-info:hover,
 .auth-nav .link-info:focus {
   color: var(--blue-text);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  
 }
 .link {
-  font-family: var(--main-font);
+   font-family: var(--main-font);
   color: var(--black-text);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+   
 }
 .auth-nav {
   display: flex;
@@ -155,6 +161,24 @@ img {
 }
 .item-letter:last-child {
   margin-left: 30px;
+}
+
+
+.link.current::after {
+  content: '';
+  position: absolute;
+  display: block;
+ 
+bottom: -34px;
+
+width: 100%;
+height: 4px;
+
+border-radius: 2px;
+background-color: var(--blue-text);
+
+
+
 }
 
 /* Основа */
@@ -212,6 +236,8 @@ img {
 .service:focus {
   color: var(--wgt-text);
   background-color: #188ce8;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Подробно */
 
@@ -347,10 +373,13 @@ img {
 .social-link:hover,
 .social-link:focus {
   background-color: #188ce8;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .icon-team,
 .social-link:focus .icon-team{
   fill: #ffffff;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Постоянные клиенты*/
@@ -386,12 +415,16 @@ img {
 }
 .clients-items:hover ,
 .clients-items:focus {
-  border: 1px solid var(--blue-text)
+  border: 1px solid var(--blue-text) ;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-items:hover .clients-links,
 .clients-items:focus .clients-links{
   fill: var(--blue-text);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 /* Подвал */
@@ -458,12 +491,16 @@ img {
 .link-footer-text:hover,
 .link-footer-text:focus {
   color: var(--blue-text);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-footer-one:hover,
 .link-footer-one:focus,
 .link-footer-two:hover,
 .link-footer-two:focus {
   color: var(--blue-text);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container .footer-list:not(:last-child) {
   list-style: none;
@@ -501,6 +538,7 @@ img {
 .subscribe-item:hover, 
 .subscribe-item:focus {
   background-color: var(--blue-text);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Портфолио */
@@ -518,14 +556,18 @@ img {
 .foundation-list:focus {
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
+
+transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-..link-port {
+.link-port {
   
 }
 .link-port:hover,
 .link-port:focus {
   display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ours-works {
   border-radius: 4px;
@@ -545,6 +587,8 @@ border-radius: 4px;
 .ours-works:focus {
   background-color: var(--blue-text);
   color: var(--wgt-text);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flex-container {
   display: flex;
