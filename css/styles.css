@@ -184,7 +184,7 @@ img {
   position: absolute;
   display: block;
  left: 0;
-bottom: -1px;
+bottom: -2px;
 
 width: 100%;
 height: 4px;
@@ -265,6 +265,7 @@ height: 100vh;
 top: 0;
 left: 50%;
 transform: translateX(-50%);
+z-index: 1;
 
 opacity: 1;
 visibility: visible;
@@ -750,7 +751,7 @@ letter-spacing: 0.03em;
 color: var(--wgt-text);
 background-color: rgba(33, 150, 243, 0.9);
 
-transform: translateY(100%);
+transform: translateY(101%);
 transition: transform var(--anim-spb)
 }
 
